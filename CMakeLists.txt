@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 3.13)
+set(PROJECT_NAME "blackjack")
+project(${PROJECT_NAME} VERSION 1.0.1 )
+set(CMAKE_CXX_STANDARD 14)
+file(GLOB SOURCES src/*.cpp)
+add_executable(blackjack src/config.h ${SOURCES})
+configure_file(pkg-config.pc.in pkg-config.pc @ONLY)
